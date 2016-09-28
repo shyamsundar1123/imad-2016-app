@@ -5,21 +5,21 @@ var path = require('path');
 var app = express();
 app.use(morgan('combined'));
 var articles ={
-    'articleOne': {
+    'article-one': {
     title:'Article-one',
     heading:'article-one!',
     content:`<p>This is my first ever content and I am so excited about it! Or maybe I'm just lying.</p>
             <p> In fact I have two blogs of my own so talk about it.</p>
             <p>I dont want to fill the page.</p>`
         },
-        'articleTwo':{
+        'article-two':{
          title:'Article-two',
     heading:'article-two!',
     content:`<p>This is my second ever content and I am so excited about it! Or maybe I'm just lying.</p>
             <p> In fact I have two blogs of my own so talk about it.</p>
             <p>I dont want to fill the page.</p>`
         },
-        'articleThree':{
+        'article-three':{
              title:'Article-three',
     heading:'article-three!',
     content:`<p>This is my third ever content and I am so excited about it! Or maybe I'm just lying.</p>
