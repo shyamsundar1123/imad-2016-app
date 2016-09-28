@@ -4,12 +4,48 @@ var path = require('path');
 
 var app = express();
 app.use(morgan('combined'));
+var articleOne = {
+    title:'Article-one',
+    heading:'article-one!',
+    content:`<p>This is my first ever content and I am so excited about it! Or maybe I'm just lying.</p>
+            <p> In fact I have two blogs of my own so talk about it.</p>
+            <p>I dont want to fill the page.</p>`
+};
+function createTemplate (data){
+    var title=data.title;
+    var heading=data.heading;
+    var content=data.content;
+var htmlTemplate =`
+    <html>
+    <head>
+        <link href="/ui/style.css" rel="stylesheet" />
+        <title>
+            $(heading) 
+        </title>
+    </head>
+    <body>
+       <div class="container"> 
+       <div>
+          <a href="/">HOME</a>  
+        </div>
+        <div>
+            <h3>CONTENT </h3>
+        </div>
+        <div>
+            $(content)
+        </div>
+        </div>
+    </body>
+    </html>
+    return htmlTemplate;
+`;
+}
 
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 app.get('/article-one', function(req,res) {
- res.sendFile(path.join(__dirname, "ui", 'article-one.html'));
+ res.send(createTemplate(articleOne));
 });
 app.get('/article-two', function(req,res) {
     res.sendFile(path.join(__dirname, "ui", 'article-two.html'));
