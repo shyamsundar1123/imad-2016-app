@@ -20,11 +20,11 @@ body {
     height: 200px;
 }
   .container {
-            max-width: 1000px;
-            margin: 0 auto;
+            max-width: inherit;
+            margin: initial;
             font: sans-serif;
             padding-top: 70px;
-            padding-left: 300px;
-            color: white;
-            background-color: black;
+            padding-left: 30px;
+            color: black;
+            background-color: white;
           }          
