@@ -43,7 +43,7 @@ img.onclick=function() {
             '</li>';
             }
             var ul=document.getElementById('namelist');
-            ul.innerHtml=list;
+            ul.innerHTML=list;
                 }
             }
         };        
