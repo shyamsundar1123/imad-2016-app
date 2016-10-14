@@ -64,7 +64,7 @@ app.get('/counter',function(req,res){
     counter=counter+1;
     res.send(counter.toString());
 });
-var names;
+var names=0;
 app.get('/submit-name', function(req,res){
     var name=req.query.name;
     names.push(name);
