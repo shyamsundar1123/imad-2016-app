@@ -38,3 +38,5 @@ img.onclick=function() {
             var ul=document.getElementById('namelist');
             ul.innerHtml=list;
     };
+     request.open('GET','http://shyamsundar1123.imad.hasura-app.io/submit-name?name='+name,true);
+    request.send(null);
