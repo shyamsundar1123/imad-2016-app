@@ -22,6 +22,6 @@ img.onclick=function() {
                 }
             }
         };
-    };
     request.open('GET','http://shyamsundar1123.imad.hasura-app.io/counter');
     request.send(null);
+    };
