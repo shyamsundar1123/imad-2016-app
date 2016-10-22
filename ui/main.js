@@ -48,5 +48,5 @@ img.onclick=function() {
      var nameInput=document.getElementById('name');
     var names=nameInput.value;
      request.open('GET','http://shyamsundar1123.imad.hasura-app.io/submit-name?name='+names,true);
-    request.send(null);
+    
     };
